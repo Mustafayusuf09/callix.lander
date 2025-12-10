@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Lock } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -75,8 +76,8 @@ const Footer: React.FC = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-slate-100 text-sm font-light text-slate-400">
                     <p className="mb-4 md:mb-0">&copy; 2025 Callix Inc. All rights reserved.</p>
                     <div className="flex gap-8">
-                        <a href="#" className="hover:text-slate-600 transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-slate-600 transition-colors">Terms of Service</a>
+                        <Link to="/privacy" className="hover:text-slate-600 transition-colors">Privacy Policy</Link>
+                        <Link to="/terms" className="hover:text-slate-600 transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>
