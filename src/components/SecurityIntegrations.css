@@ -1,0 +1,624 @@
+.integrations-security-section {
+    padding: 6rem 0;
+    background: #fafafa;
+    overflow: hidden;
+}
+
+/* Section Header */
+.section-header {
+    text-align: left;
+    margin-bottom: 4rem;
+    max-width: 600px;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #111827;
+    margin-bottom: 1.25rem;
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Bento Grid Layout */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    max-width: 1100px;
+}
+
+/* Bento Card Base Styles */
+.bento-card {
+    background: #ffffff;
+    border-radius: 1.25rem;
+    border: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    min-height: 280px;
+}
+
+.bento-card:hover {
+    border-color: #d1d5db;
+}
+
+.bento-single {
+    grid-column: span 1;
+}
+
+.bento-double {
+    grid-column: span 2;
+}
+
+.bento-triple {
+    grid-column: span 3;
+}
+
+/* Card Content */
+.card-content {
+    margin-top: auto;
+}
+
+.card-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.375rem;
+}
+
+.card-content p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Card Visual Areas */
+.card-visual {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+/* Command Search Card */
+.command-card .card-visual {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.command-window {
+    width: 100%;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    color: #9ca3af;
+    font-size: 0.8125rem;
+}
+
+.recent-items {
+    padding: 0.75rem;
+}
+
+.recent-label {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.recent-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    font-size: 0.8125rem;
+    color: #374151;
+    border-radius: 0.375rem;
+}
+
+.recent-item.active {
+    background: #f3f4f6;
+}
+
+.checkbox {
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 0.25rem;
+}
+
+.check-green {
+    color: #10b981;
+}
+
+.keyboard-shortcut {
+    display: flex;
+    gap: 0.25rem;
+    position: absolute;
+    bottom: 5.5rem;
+    left: 1.5rem;
+}
+
+.key {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+/* SSO Card */
+.sso-card .card-visual {
+    padding: 2rem 0;
+}
+
+.sso-button {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+    transition: all 0.2s ease;
+}
+
+.sso-button:hover {
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+}
+
+/* Security Badge Card */
+.security-badge-card .card-visual {
+    padding: 1.5rem 0;
+}
+
+.security-badge {
+    width: 90px;
+    height: 90px;
+}
+
+/* Meeting Platforms Card */
+.meeting-card .card-visual {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.floating-icons-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border-radius: 1rem;
+}
+
+.card-icon-main {
+    width: 28px;
+    height: 28px;
+    color: #10b981;
+}
+
+.mini-logos {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.mini-logos .integration-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 0.5rem;
+}
+
+/* CRM Card */
+.crm-card {
+    min-height: 240px;
+}
+
+.crm-card .card-content {
+    margin-bottom: 1.5rem;
+}
+
+.crm-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-item .integration-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease;
+}
+
+.logo-item:hover .integration-logo {
+    transform: scale(1.1);
+}
+
+.logo-item span {
+    font-size: 0.6875rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Marketing Tools Card */
+.marketing-card {
+    min-height: 240px;
+}
+
+.marketing-card .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.marketing-card .card-icon {
+    width: 24px;
+    height: 24px;
+    color: #10b981;
+    margin-bottom: 0.5rem;
+}
+
+.marketing-logos {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.marketing-logos .integration-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 0.5rem;
+}
+
+/* Calendar Card */
+.calendar-card {
+    min-height: 300px;
+}
+
+.calendar-visual {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0.5rem;
+}
+
+.calendar-mini {
+    background: #f9fafb;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    padding: 1rem;
+    width: 100%;
+}
+
+.calendar-header {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.75rem;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.25rem;
+}
+
+.day-label {
+    font-size: 0.625rem;
+    color: #9ca3af;
+    text-align: center;
+    padding: 0.25rem;
+}
+
+.day-num {
+    font-size: 0.6875rem;
+    color: #374151;
+    text-align: center;
+    padding: 0.375rem;
+    border-radius: 0.25rem;
+}
+
+.day-num.active {
+    background: #10b981;
+    color: white;
+}
+
+.calendar-logos {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.calendar-logos .integration-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 0.375rem;
+}
+
+/* Workflows Card */
+.workflows-card .card-visual {
+    position: relative;
+}
+
+.workflows-visual {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.zap-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zap-icon .integration-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 1rem;
+}
+
+.zap-lines {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: #FF4A00;
+    opacity: 0.5;
+    right: 30%;
+    top: 20%;
+}
+
+/* Security Features Card */
+.security-features-card {
+    min-height: 200px;
+}
+
+.security-features-card .card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.security-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.security-icon-main {
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border-radius: 0.75rem;
+    color: #10b981;
+}
+
+.security-header h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.125rem;
+}
+
+.security-subtitle {
+    font-size: 0.8125rem;
+    color: #6b7280;
+}
+
+.security-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    flex: 1;
+}
+
+.security-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+}
+
+.feature-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Integrations Grid Card */
+.integrations-grid-card {
+    min-height: 300px;
+}
+
+.integrations-grid-card .card-content {
+    margin-bottom: 1rem;
+}
+
+.logos-floating-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    padding: 0.5rem;
+}
+
+.floating-logo {
+    width: 48px;
+    height: 48px;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.floating-logo:hover {
+    background: white;
+    border-color: #d1d5db;
+}
+
+.floating-logo .integration-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 0.5rem;
+}
+
+/* Integration Logo Base */
+.integration-logo {
+    flex-shrink: 0;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bento-triple {
+        grid-column: span 2;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .integrations-security-section {
+        padding: 4rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 3rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .bento-double,
+    .bento-triple {
+        grid-column: span 1;
+    }
+
+    .bento-card {
+        min-height: 240px;
+    }
+
+    .crm-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Hover Effects */
+.bento-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(16, 185, 129, 0.02) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+.bento-card:hover::before {
+    opacity: 1;
+}
+
+/* Subtle gradient backgrounds for specific cards */
+.meeting-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.security-badge-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+}
+
+.workflows-card {
+    background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
+}
+
+.security-features-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+}
