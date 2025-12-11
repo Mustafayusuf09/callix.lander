@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
                     </div>
 
                     {/* Right Visual */}
-                    <div className="w-full relative lg:pl-8 order-first lg:order-last">
+                    <div className="w-full relative lg:pl-8 lg:order-last">
                         {/* Green gradient glow behind video */}
                         <div
                             className="absolute -top-20 sm:-top-40 -right-10 sm:-right-10 w-[400px] sm:w-[700px] h-[350px] sm:h-[600px] pointer-events-none"
