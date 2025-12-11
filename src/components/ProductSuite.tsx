@@ -44,7 +44,7 @@ const features = [
 
 const ProductSuite: React.FC = () => {
   return (
-    <section className="py-24 lg:py-32 bg-white border-b border-slate-100 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-32 bg-white border-b border-slate-100 relative overflow-hidden">
 
       {/* Radar Illustration (Absolute Positioned on Right) */}
       <div className="absolute top-0 right-[-10%] md:right-0 w-[800px] h-[800px] pointer-events-none opacity-100 hidden md:block">
@@ -77,30 +77,30 @@ const ProductSuite: React.FC = () => {
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
 
         {/* Header Content */}
-        <div className="mb-24 max-w-2xl">
-          <h2 className="text-sm font-medium text-slate-500 mb-4">Callix Product Suite</h2>
-          <h3 className="text-5xl lg:text-6xl font-serif text-slate-800 mb-8 tracking-tight font-normal">
+        <div className="mb-12 sm:mb-16 lg:mb-24 max-w-2xl">
+          <h2 className="text-xs sm:text-sm font-medium text-slate-500 mb-3 sm:mb-4">Callix Product Suite</h2>
+          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-slate-800 mb-5 sm:mb-8 tracking-tight font-normal">
             Get to know Callix
           </h3>
-          <p className="text-lg text-slate-500 font-light leading-relaxed max-w-lg">
+          <p className="text-base sm:text-lg text-slate-500 font-light leading-relaxed max-w-lg">
             Replace broken tools with Callix, the only platform that helps you run Creative Strategy at the speed of sales.
           </p>
         </div>
 
         {/* Feature Grid - Plain Minimal Style */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-x-10 sm:gap-y-12 lg:gap-x-12 lg:gap-y-16">
           {features.map((feature, index) => (
             <div key={index} className="group">
               <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center mb-4 transition-colors">
                 <feature.icon className="w-5 h-5 text-slate-600 group-hover:text-emerald-500 transition-colors" />
               </div>
 
-              <h4 className="text-[17px] font-semibold text-slate-900 mb-3">{feature.title}</h4>
+              <h4 className="text-[15px] sm:text-[17px] font-semibold text-slate-900 mb-2 sm:mb-3">{feature.title}</h4>
 
-              <p className="text-[14px] text-slate-500 leading-relaxed font-normal">
+              <p className="text-[13px] sm:text-[14px] text-slate-500 leading-relaxed font-normal">
                 {feature.description}
               </p>
             </div>

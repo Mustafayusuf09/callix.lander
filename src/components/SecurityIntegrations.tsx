@@ -6,23 +6,23 @@ import {
 
 const SecurityIntegrations: React.FC = () => {
     return (
-        <section className="py-24 bg-white border-b border-slate-200">
-            <div className="max-w-7xl mx-auto px-6">
+        <section className="py-16 sm:py-20 lg:py-24 bg-white border-b border-slate-200">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
                 {/* Header */}
-                <div className="mb-16 max-w-2xl">
-                    <h2 className="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-4">Security & Compliance</h2>
-                    <h3 className="text-4xl md:text-5xl font-serif text-slate-900 mb-6 leading-tight">
-                        Your data is protected by <br />
+                <div className="mb-10 sm:mb-12 lg:mb-16 max-w-2xl">
+                    <h2 className="text-xs sm:text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-3 sm:mb-4">Security & Compliance</h2>
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-slate-900 mb-4 sm:mb-6 leading-tight">
+                        Your data is protected by <br className="hidden sm:block" />
                         <span className="text-emerald-700">enterprise-grade security</span>
                     </h3>
-                    <p className="text-lg text-slate-500 font-light leading-relaxed">
+                    <p className="text-sm sm:text-base lg:text-lg text-slate-500 font-light leading-relaxed">
                         We take security seriously. Your conversations and insights are protected by the same technology trusted by leading tech giants.
                     </p>
                 </div>
 
                 {/* Bento Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-4 sm:gap-6">
 
                     {/* Card 1: Role-Based Access (Top Left) */}
                     <div className="md:col-span-6 group bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:shadow-lg transition-all duration-300 flex flex-col justify-between overflow-hidden relative">

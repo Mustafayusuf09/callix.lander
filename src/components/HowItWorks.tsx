@@ -61,19 +61,238 @@ const HowItWorks: React.FC = () => {
 
     return (
         <section className="bg-white border-t border-slate-200 relative z-20">
-            <div className="max-w-7xl mx-auto px-6">
-                {/* Main Flex Container - Right column height determines total section height */}
-                <div className="lg:flex items-start relative">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+
+                {/* MOBILE LAYOUT: Header + Alternating Steps */}
+                <div className="lg:hidden py-12 sm:py-16">
+                    {/* Header */}
+                    <div className="mb-8 sm:mb-10">
+                        <h4 className="text-xs sm:text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-3 sm:mb-4">
+                            How it works
+                        </h4>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-slate-900 leading-[1.1] mb-4 sm:mb-6">
+                            How Conversations Become Marketing Assets
+                        </h2>
+                        <p className="text-base sm:text-lg text-slate-500 font-light font-medium tracking-tight">
+                            From Call → Insight → Campaign
+                        </p>
+                    </div>
+
+                    {/* Mobile Step 1: Text then Visual */}
+                    <div className="mb-12 sm:mb-16">
+                        <div className="flex items-start gap-4 mb-6">
+                            <div className="w-8 h-8 rounded-full border-2 border-emerald-500 flex items-center justify-center text-xs font-bold shrink-0 bg-white text-emerald-600">
+                                1
+                            </div>
+                            <div>
+                                <h3 className="text-lg sm:text-xl font-serif text-slate-900 mb-2">
+                                    {steps[0].label}
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-500 font-light leading-relaxed">
+                                    {steps[0].description}
+                                </p>
+                            </div>
+                        </div>
+                        {/* Step 1 Visual - Google Meet Mockup */}
+                        <div className="w-full">
+                            <div className="bg-white rounded-xl overflow-hidden relative shadow-xl border border-slate-200">
+                                {/* Google Meet Header */}
+                                <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100">
+                                    <div className="flex items-center gap-3">
+                                        <span className="text-slate-900 text-sm font-medium">Discovery Call</span>
+                                        <span className="text-slate-300 text-xs">|</span>
+                                        <span className="text-slate-500 text-xs">12:34</span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5 px-2.5 py-1 bg-red-50 rounded-full border border-red-100">
+                                        <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                                        <span className="text-xs font-medium text-red-500">REC</span>
+                                    </div>
+                                </div>
+                                {/* Main Content */}
+                                <div className="p-4">
+                                    {/* Callix Notetaker */}
+                                    <div className="relative h-16 sm:h-20 bg-gradient-to-r from-emerald-50 to-emerald-100 rounded-xl overflow-hidden border border-emerald-200 mb-3">
+                                        <div className="absolute inset-0 flex items-center justify-center gap-3">
+                                            <img src="/callix-ai-icon.png" alt="Callix Notetaker" className="w-12 h-12 sm:w-14 sm:h-14 object-contain" />
+                                            <div className="flex flex-col">
+                                                <span className="text-xs sm:text-sm font-semibold text-emerald-700">Callix Notetaker</span>
+                                                <div className="flex items-center gap-1.5 text-[10px] sm:text-xs text-slate-500 font-medium">
+                                                    <span>taking notes</span>
+                                                    <span className="flex gap-0.5">
+                                                        <span className="w-1 h-1 bg-emerald-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                                                        <span className="w-1 h-1 bg-emerald-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                                                        <span className="w-1 h-1 bg-emerald-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* Participant Grid */}
+                                    <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                                        <div className="relative aspect-[4/3] bg-slate-100 rounded-lg overflow-hidden border border-slate-200">
+                                            <img src="/sales-rep.png" alt="Sales Rep" className="absolute inset-0 w-full h-full object-cover" />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                                            <div className="absolute bottom-2 left-2">
+                                                <span className="px-2 py-0.5 bg-black/60 backdrop-blur-sm rounded text-[10px] font-medium text-white">You</span>
+                                            </div>
+                                        </div>
+                                        <div className="relative aspect-[4/3] bg-slate-100 rounded-lg overflow-hidden border-2 border-emerald-400">
+                                            <img src="/prospect.png" alt="Prospect" className="absolute inset-0 w-full h-full object-cover" />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                                            <div className="absolute bottom-2 left-2">
+                                                <span className="px-2 py-0.5 bg-black/60 backdrop-blur-sm rounded text-[10px] font-medium text-white">Prospect</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* Bottom Controls */}
+                                <div className="bg-slate-50 border-t border-slate-100 py-3 px-4">
+                                    <div className="flex items-center justify-center gap-2">
+                                        <button className="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center">
+                                            <Mic className="w-4 h-4 text-slate-600" />
+                                        </button>
+                                        <button className="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center">
+                                            <Video className="w-4 h-4 text-slate-600" />
+                                        </button>
+                                        <button className="px-4 py-2 bg-red-500 rounded-full text-xs font-medium text-white">
+                                            Leave
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Mobile Step 2: Text then Visual */}
+                    <div className="mb-12 sm:mb-16">
+                        <div className="flex items-start gap-4 mb-6">
+                            <div className="w-8 h-8 rounded-full border-2 border-emerald-500 flex items-center justify-center text-xs font-bold shrink-0 bg-white text-emerald-600">
+                                2
+                            </div>
+                            <div>
+                                <h3 className="text-lg sm:text-xl font-serif text-slate-900 mb-2">
+                                    {steps[1].label}
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-500 font-light leading-relaxed">
+                                    {steps[1].description}
+                                </p>
+                            </div>
+                        </div>
+                        {/* Step 2 Visual - AI Analysis Dashboard (Simplified) */}
+                        <div className="w-full">
+                            <div className="bg-white rounded-xl overflow-hidden relative shadow-xl border border-slate-200">
+                                {/* Header */}
+                                <div className="p-4 border-b border-slate-100 bg-slate-50/50">
+                                    <div className="flex items-center gap-2">
+                                        <Sparkles className="w-4 h-4 text-emerald-500" />
+                                        <span className="text-sm font-semibold text-slate-800">AI Analysis</span>
+                                    </div>
+                                </div>
+                                {/* Content */}
+                                <div className="p-4 space-y-4">
+                                    {/* Revenue Pattern */}
+                                    <div className="bg-emerald-50 rounded-lg p-3 border border-emerald-100">
+                                        <div className="text-[10px] text-emerald-600 font-bold uppercase mb-1">Revenue Pattern Detected</div>
+                                        <div className="text-sm font-medium text-slate-800">High-intent buyer profile identified</div>
+                                    </div>
+                                    {/* Key Insights */}
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-2 text-sm">
+                                            <CheckCircle className="w-4 h-4 text-emerald-500" />
+                                            <span className="text-slate-600">Buying signal: "Need to hit $5M ARR"</span>
+                                        </div>
+                                        <div className="flex items-center gap-2 text-sm">
+                                            <CheckCircle className="w-4 h-4 text-emerald-500" />
+                                            <span className="text-slate-600">Pain point: "Acquisition costs doubled"</span>
+                                        </div>
+                                        <div className="flex items-center gap-2 text-sm">
+                                            <CheckCircle className="w-4 h-4 text-emerald-500" />
+                                            <span className="text-slate-600">Objection handled: Budget concerns</span>
+                                        </div>
+                                    </div>
+                                    {/* Deal Score */}
+                                    <div className="bg-slate-50 rounded-lg p-3 border border-slate-100">
+                                        <div className="flex justify-between items-center">
+                                            <span className="text-xs text-slate-500">Deal Score</span>
+                                            <span className="text-lg font-bold text-emerald-600">87%</span>
+                                        </div>
+                                        <div className="h-2 bg-slate-200 rounded-full mt-2 overflow-hidden">
+                                            <div className="h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full" style={{ width: '87%' }} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Mobile Step 3: Text then Visual */}
+                    <div className="mb-8 sm:mb-10">
+                        <div className="flex items-start gap-4 mb-6">
+                            <div className="w-8 h-8 rounded-full border-2 border-emerald-500 flex items-center justify-center text-xs font-bold shrink-0 bg-white text-emerald-600">
+                                3
+                            </div>
+                            <div>
+                                <h3 className="text-lg sm:text-xl font-serif text-slate-900 mb-2">
+                                    {steps[2].label}
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-500 font-light leading-relaxed">
+                                    {steps[2].description}
+                                </p>
+                            </div>
+                        </div>
+                        {/* Step 3 Visual - Instagram Ad Mockup */}
+                        <div className="w-full flex justify-center">
+                            <div className="bg-slate-50 rounded-xl border border-slate-200 p-6 shadow-xl">
+                                {/* Instagram Ad Mockup */}
+                                <div className="w-full max-w-[240px] bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden">
+                                    {/* Instagram Header */}
+                                    <div className="p-3 flex items-center gap-3 border-b border-slate-100">
+                                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+                                            <img src="/callix-ai-icon.png" alt="Callix" className="w-6 h-6 object-contain" />
+                                        </div>
+                                        <div className="flex-1">
+                                            <div className="text-xs font-bold text-slate-900">callix.io</div>
+                                            <div className="text-[10px] text-slate-400">Sponsored</div>
+                                        </div>
+                                        <MoreHorizontal className="w-4 h-4 text-slate-400" />
+                                    </div>
+                                    {/* Ad Creative Image */}
+                                    <div className="relative">
+                                        <img src="/ad-creative.png" alt="Ad Creative" className="w-full h-auto object-contain" />
+                                    </div>
+                                    {/* Instagram Actions */}
+                                    <div className="p-3 border-t border-slate-100">
+                                        <div className="flex items-center gap-4 mb-2">
+                                            <svg className="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                                            <svg className="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                                        </div>
+                                        <div className="text-[10px] text-slate-500">2,847 likes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Mobile CTA */}
+                    <div className="mt-8 sm:mt-10">
+                        <button className="w-full sm:w-auto px-6 py-3 bg-[#1A1A1A] hover:bg-black text-white rounded-full font-medium transition-all shadow-xl shadow-emerald-900/5 hover:shadow-emerald-900/10 text-sm inline-flex items-center justify-center gap-2 group">
+                            Book A Demo Today
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </button>
+                    </div>
+                </div>
+
+                {/* DESKTOP LAYOUT: Original sticky left + scrolling right */}
+                <div className="hidden lg:flex items-start relative">
 
                     {/* LEFT SIDE: Sticky Content */}
-                    {/* sticky top-0 + h-screen ensures it pins to the viewport while parent scrolls */}
-                    <div className="lg:w-1/2 h-auto lg:h-screen sticky top-0 self-start flex flex-col justify-center py-20 lg:py-0 pr-0 lg:pr-16 order-2 lg:order-1 z-10">
+                    <div className="lg:w-1/2 h-screen sticky top-0 self-start flex flex-col justify-center pr-16 z-10">
 
                         <div className="mb-12">
                             <h4 className="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-4">
                                 How it works
                             </h4>
-                            <h2 className="text-4xl lg:text-5xl font-serif text-slate-900 leading-[1.1] mb-6">
+                            <h2 className="text-5xl font-serif text-slate-900 leading-[1.1] mb-6">
                                 How Conversations Become Marketing Assets
                             </h2>
                             <p className="text-lg text-slate-500 font-light font-medium tracking-tight">
@@ -85,7 +304,7 @@ const HowItWorks: React.FC = () => {
                         <div className="space-y-8 relative">
 
                             {/* Vertical connecting line */}
-                            <div className="absolute left-[19px] top-4 bottom-10 w-px bg-slate-200 -z-10 hidden lg:block"></div>
+                            <div className="absolute left-[19px] top-4 bottom-10 w-px bg-slate-200 -z-10"></div>
 
                             {steps.map((step, index) => (
                                 <div
@@ -94,7 +313,7 @@ const HowItWorks: React.FC = () => {
                                 >
                                     <div className="flex items-start gap-6">
                                         {/* Step Number Indicator */}
-                                        <div className={`hidden lg:flex w-10 h-10 rounded-full border-2 items-center justify-center text-sm font-bold shrink-0 transition-all duration-500 z-10 bg-white ${activeStep === index
+                                        <div className={`flex w-10 h-10 rounded-full border-2 items-center justify-center text-sm font-bold shrink-0 transition-all duration-500 z-10 bg-white ${activeStep === index
                                             ? 'border-emerald-500 text-emerald-600 scale-110 shadow-lg shadow-emerald-100'
                                             : 'border-slate-200 text-slate-300'
                                             }`}>
@@ -120,7 +339,7 @@ const HowItWorks: React.FC = () => {
                             ))}
                         </div>
 
-                        <div className="mt-12 lg:pl-16">
+                        <div className="mt-12 pl-16">
                             <button className="px-6 py-3 bg-[#1A1A1A] hover:bg-black text-white rounded-full font-medium transition-all shadow-xl shadow-emerald-900/5 hover:shadow-emerald-900/10 text-sm inline-flex items-center gap-2 group">
                                 Book A Demo Today
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -129,14 +348,14 @@ const HowItWorks: React.FC = () => {
                     </div>
 
                     {/* RIGHT SIDE: Scrolling Visuals */}
-                    <div className="lg:w-1/2 order-1 lg:order-2 pb-24 lg:pb-0">
+                    <div className="lg:w-1/2">
 
                         {/* STEP 1 VISUAL: Automatic Call Capture */}
                         {/* Increased height to delay scroll transition (150vh) */}
-                        <div ref={step1Ref} className="min-h-screen lg:min-h-[150vh] flex items-center justify-center py-24 lg:py-0">
-                            <div className="w-full relative group px-4 lg:px-0">
+                        <div ref={step1Ref} className="min-h-[60vh] sm:min-h-[80vh] lg:min-h-[150vh] flex items-center justify-center py-8 sm:py-16 lg:py-0">
+                            <div className="w-full relative group px-0 sm:px-4 lg:px-0">
                                 {/* Visual Mockup - Google Meet Style (Light) */}
-                                <div className="bg-white rounded-2xl overflow-hidden relative shadow-xl border border-slate-200 transition-all">
+                                <div className="bg-white rounded-xl sm:rounded-2xl overflow-hidden relative shadow-xl border border-slate-200 transition-all">
 
                                     {/* Google Meet Header */}
                                     <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100">
@@ -237,10 +456,10 @@ const HowItWorks: React.FC = () => {
 
                         {/* STEP 2 VISUAL: AI-Powered Analysis */}
                         {/* Increased height to delay scroll transition (150vh) */}
-                        <div ref={step2Ref} className="min-h-screen lg:min-h-[150vh] flex items-center justify-center py-24 lg:py-0">
-                            <div className="w-full relative group px-4 lg:px-0">
+                        <div ref={step2Ref} className="min-h-[70vh] sm:min-h-[90vh] lg:min-h-[150vh] flex items-center justify-center py-8 sm:py-16 lg:py-0">
+                            <div className="w-full relative group px-0 sm:px-4 lg:px-0">
                                 {/* Visual Mockup - Deal Analysis Dashboard */}
-                                <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden relative shadow-xl transition-all">
+                                <div className="bg-white rounded-xl sm:rounded-2xl border border-slate-200 overflow-hidden relative shadow-xl transition-all">
 
                                     {/* Main Content Grid */}
                                     <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -531,13 +750,13 @@ const HowItWorks: React.FC = () => {
                         </div>
 
                         {/* STEP 3 VISUAL: Marketing Intelligence */}
-                        <div ref={step3Ref} className="min-h-screen lg:min-h-[120vh] flex items-center justify-center py-24 lg:py-0">
-                            <div className="w-full relative group px-4 lg:px-0">
+                        <div ref={step3Ref} className="min-h-[50vh] sm:min-h-[70vh] lg:min-h-[120vh] flex items-center justify-center py-8 sm:py-16 lg:py-0">
+                            <div className="w-full relative group px-0 sm:px-4 lg:px-0">
                                 {/* Visual Mockup */}
-                                <div className="bg-slate-50 rounded-2xl border border-slate-200 aspect-square md:aspect-[4/3] overflow-hidden relative shadow-xl transition-all flex items-center justify-center p-8">
+                                <div className="bg-slate-50 rounded-xl sm:rounded-2xl border border-slate-200 aspect-square md:aspect-[4/3] overflow-hidden relative shadow-xl transition-all flex items-center justify-center p-4 sm:p-6 lg:p-8">
 
                                     {/* Instagram Ad Mockup */}
-                                    <div className="w-full max-w-[280px] bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden scale-100 group-hover:scale-105 transition-transform duration-300">
+                                    <div className="w-full max-w-[240px] sm:max-w-[260px] lg:max-w-[280px] bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden scale-100 group-hover:scale-105 transition-transform duration-300">
 
                                         {/* Instagram Header */}
                                         <div className="p-3 flex items-center gap-3 border-b border-slate-100">

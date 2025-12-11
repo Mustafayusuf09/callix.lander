@@ -39,31 +39,31 @@ const TranscriptAnalysis: React.FC = () => {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-[#F8FAFC] overflow-hidden relative border-t border-slate-200">
+    <section ref={sectionRef} className="py-16 sm:py-20 lg:py-24 bg-[#F8FAFC] overflow-hidden relative border-t border-slate-200">
 
       {/* Soft Green Gradient Background */}
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-emerald-100/50 via-transparent to-transparent"></div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
 
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-xs sm:text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-3 sm:mb-4">
             Transcript Analysis
           </h2>
-          <h3 className="text-4xl md:text-5xl font-serif text-slate-900 mb-6 leading-tight">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-slate-900 mb-4 sm:mb-6 leading-tight">
             Transform every call into a high-performing marketing asset
           </h3>
-          <p className="text-lg text-slate-500 font-light">
+          <p className="text-sm sm:text-base lg:text-lg text-slate-500 font-light px-2">
             AI analyzes your conversations in real time and turns buying signals, narratives, and proof points into polished ads your marketing team can ship immediately.
           </p>
         </div>
 
         {/* Workflow Graphic */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0 relative">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-0 relative">
 
           {/* Left Side: Inputs (Logos) */}
-          <div className="flex lg:flex-col gap-6 lg:gap-16 lg:mr-12 relative z-10">
+          <div className="flex flex-row lg:flex-col gap-4 sm:gap-6 lg:gap-16 lg:mr-12 relative z-10">
             {[
               {
                 name: "Zoom",
@@ -79,7 +79,7 @@ const TranscriptAnalysis: React.FC = () => {
               },
             ].map((item, i) => (
               <div key={i} className="relative group">
-                <div className="w-16 h-16 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center hover:scale-105 transition-transform duration-300 z-20 relative p-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center hover:scale-105 transition-transform duration-300 z-20 relative p-2">
                   <img src={item.logo} alt={item.name} className="w-full h-full object-contain" />
                 </div>
               </div>
@@ -87,7 +87,7 @@ const TranscriptAnalysis: React.FC = () => {
           </div>
 
           {/* Center: The Transcript Card */}
-          <div className="relative w-full max-w-[500px] shrink-0">
+          <div className="relative w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[500px] shrink-0">
             {/* Connecting Lines SVG (Desktop only) */}
             <svg className="absolute inset-0 w-full h-full -z-10 hidden lg:block overflow-visible pointer-events-none">
               {/* Left Connectors: Aligning to Icon Centers at Y = 122, 250, 378 */}
@@ -101,21 +101,21 @@ const TranscriptAnalysis: React.FC = () => {
               <path d="M500 250 C 524 250, 524 378, 548 378" fill="none" stroke="#E2E8F0" strokeWidth="1" />
             </svg>
 
-            <div className="bg-white rounded-xl shadow-2xl shadow-slate-200/50 border border-slate-200 overflow-hidden relative h-[500px]">
+            <div className="bg-white rounded-xl shadow-2xl shadow-slate-200/50 border border-slate-200 overflow-hidden relative h-[480px] sm:h-[450px] lg:h-[500px]">
 
               {/* Card Header */}
-              <div className="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+              <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
                 <div>
-                  <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Source: Zoom Recording</div>
-                  <div className="text-sm font-semibold text-slate-800">Discovery: Acme Corp</div>
+                  <div className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Source: Zoom Recording</div>
+                  <div className="text-xs sm:text-sm font-semibold text-slate-800">Discovery: Acme Corp</div>
                 </div>
-                <div className="px-2 py-1 bg-emerald-100 text-emerald-700 text-[10px] font-bold rounded uppercase tracking-wide">
+                <div className="px-2 py-1 bg-emerald-100 text-emerald-700 text-[9px] sm:text-[10px] font-bold rounded uppercase tracking-wide">
                   Processing
                 </div>
               </div>
 
               {/* Transcript Content */}
-              <div className="p-8 space-y-6 text-sm relative">
+              <div className="p-5 sm:p-6 lg:p-8 pb-20 sm:pb-6 space-y-4 sm:space-y-5 lg:space-y-6 text-xs sm:text-sm relative">
 
                 {/* Scan Line Animation (Vertical Line moving Left to Right) */}
                 {/* Only renders when visible, runs once */}
@@ -123,16 +123,16 @@ const TranscriptAnalysis: React.FC = () => {
 
                 {/* Dialogue Items */}
                 <div className="space-y-1">
-                  <div className="text-[10px] font-bold text-slate-400 uppercase mb-1">Sales Rep (02:14)</div>
-                  <p className="text-slate-600">So looking at Q4, what is the single biggest bottleneck to hitting that revenue target?</p>
+                  <div className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase mb-1">Sales Rep (02:14)</div>
+                  <p className="text-slate-600 text-[11px] sm:text-sm">So looking at Q4, what is the single biggest bottleneck to hitting that revenue target?</p>
                 </div>
 
                 <div className="space-y-1 relative group">
-                  <div className="text-[10px] font-bold text-emerald-600 uppercase mb-1 flex items-center gap-1">
+                  <div className="text-[9px] sm:text-[10px] font-bold text-emerald-600 uppercase mb-1 flex items-center gap-1">
                     Prospect (02:18)
                     <CheckCircle2 className="w-3 h-3" />
                   </div>
-                  <p className="text-slate-800 leading-relaxed">
+                  <p className="text-slate-800 leading-relaxed text-[11px] sm:text-sm">
                     "Honestly, our <span
                       className={`px-1 py-0.5 rounded font-medium box-decoration-clone ${isVisible ? 'animate-reveal-highlight' : ''}`}
                       style={{ animationDelay: '1.5s', backgroundColor: 'transparent' }}
@@ -142,16 +142,16 @@ const TranscriptAnalysis: React.FC = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <div className="text-[10px] font-bold text-slate-400 uppercase mb-1">Sales Rep (02:25)</div>
-                  <p className="text-slate-600">That makes sense. If we could fix that, what's the goal?</p>
+                  <div className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase mb-1">Sales Rep (02:25)</div>
+                  <p className="text-slate-600 text-[11px] sm:text-sm">That makes sense. If we could fix that, what's the goal?</p>
                 </div>
 
                 <div className="space-y-1">
-                  <div className="text-[10px] font-bold text-emerald-600 uppercase mb-1 flex items-center gap-1">
+                  <div className="text-[9px] sm:text-[10px] font-bold text-emerald-600 uppercase mb-1 flex items-center gap-1">
                     Prospect (02:28)
                     <CheckCircle2 className="w-3 h-3" />
                   </div>
-                  <p className="text-slate-800 leading-relaxed">
+                  <p className="text-slate-800 leading-relaxed text-[11px] sm:text-sm">
                     "We need to hit <span
                       className={`px-1 py-0.5 rounded font-medium box-decoration-clone ${isVisible ? 'animate-reveal-highlight' : ''}`}
                       style={{ animationDelay: '2.5s', backgroundColor: 'transparent' }}
@@ -161,13 +161,13 @@ const TranscriptAnalysis: React.FC = () => {
               </div>
 
               {/* Bottom Status Bar */}
-              <div className={`absolute bottom-6 left-1/2 -translate-x-1/2 bg-white border rounded-full shadow-lg px-4 py-2 flex items-center gap-3 z-30 transition-all duration-500 ${scanComplete ? 'border-emerald-200' : 'border-slate-200'}`}>
+              <div className={`absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 bg-white border rounded-full shadow-lg px-3 sm:px-4 py-2 flex items-center gap-2 sm:gap-3 z-30 transition-all duration-500 ${scanComplete ? 'border-emerald-200' : 'border-slate-200'}`}>
                 {scanComplete ? (
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-600" />
                 ) : (
-                  <Loader2 className="w-4 h-4 text-emerald-600 animate-spin" />
+                  <Loader2 className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-600 animate-spin" />
                 )}
-                <span className={`text-xs font-medium ${scanComplete ? 'text-emerald-700' : 'text-slate-700'}`}>
+                <span className={`text-[10px] sm:text-xs font-medium ${scanComplete ? 'text-emerald-700' : 'text-slate-700'}`}>
                   {scanComplete ? 'Signals Extracted' : 'Extracting Buying Signals...'}
                 </span>
               </div>
@@ -175,14 +175,14 @@ const TranscriptAnalysis: React.FC = () => {
           </div>
 
           {/* Right Side: Outputs (Ad Platforms) */}
-          <div className="flex lg:flex-col gap-6 lg:gap-16 lg:ml-12 relative z-10 mt-8 lg:mt-0">
+          <div className="flex flex-row lg:flex-col gap-4 sm:gap-6 lg:gap-16 lg:ml-12 relative z-10">
             {[
               { name: "Meta Ads", logo: "https://cdn.simpleicons.org/meta/0081FB" },
               { name: "LinkedIn Ads", logo: "/logos/linkedin.png" },
               { name: "TikTok Ads", logo: "https://cdn.simpleicons.org/tiktok/000000" },
             ].map((item, i) => (
               <div key={i} className="relative group">
-                <div className="w-16 h-16 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center hover:scale-105 transition-transform duration-300 p-3.5">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center hover:scale-105 transition-transform duration-300 p-2.5 sm:p-3 lg:p-3.5">
                   <img src={item.logo} alt={item.name} className="w-full h-full object-contain" />
                 </div>
               </div>

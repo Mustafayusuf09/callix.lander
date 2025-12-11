@@ -63,36 +63,36 @@ const Automations: React.FC = () => {
     }, [isVisible]);
 
     return (
-        <section ref={sectionRef} className="py-24 lg:py-32 bg-slate-50 border-b border-slate-200 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6">
+        <section ref={sectionRef} className="py-16 sm:py-20 lg:py-32 bg-slate-50 border-b border-slate-200 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
                 {/* Header */}
-                <div className="text-center max-w-3xl mx-auto mb-20">
-                    <h4 className="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-4">
+                <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20">
+                    <h4 className="text-xs sm:text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-3 sm:mb-4">
                         The Engine
                     </h4>
-                    <h2 className="text-4xl lg:text-5xl font-serif text-slate-900 leading-[1.1] mb-6">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-slate-900 leading-[1.1] mb-4 sm:mb-6">
                         One Conversation. <br className="hidden md:block" /> Infinite Value.
                     </h2>
-                    <p className="text-lg text-slate-500 font-light leading-relaxed">
+                    <p className="text-sm sm:text-base lg:text-lg text-slate-500 font-light leading-relaxed px-2">
                         Callix takes a single sales call and automatically distributes the intelligence to every team that needs it.
                     </p>
                 </div>
 
                 {/* Animation Grid */}
-                <div className="grid lg:grid-cols-12 gap-8 items-center relative min-h-[600px]">
+                <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 items-center relative min-h-[500px] lg:min-h-[600px]">
 
                     {/* LEFT COLUMN: Transcript (Source) - Spans 5 columns */}
                     <div className="lg:col-span-5 relative z-10 h-full flex items-center">
                         <div className="w-full relative group">
                             {/* Background layers */}
-                            <div className="absolute inset-0 bg-[#F8FAFC] rounded-2xl border border-slate-200 -z-10 transform rotate-1 transition-transform group-hover:rotate-0"></div>
-                            <div className="absolute inset-0 bg-white rounded-2xl -z-10 shadow-xl"></div>
+                            <div className="absolute inset-0 bg-[#F8FAFC] rounded-xl sm:rounded-2xl border border-slate-200 -z-10 transform rotate-1 transition-transform group-hover:rotate-0"></div>
+                            <div className="absolute inset-0 bg-white rounded-xl sm:rounded-2xl -z-10 shadow-xl"></div>
 
-                            <div className="bg-white rounded-xl border border-slate-200 overflow-hidden relative min-h-[550px] flex flex-col justify-start">
+                            <div className="bg-white rounded-xl border border-slate-200 overflow-hidden relative min-h-[400px] sm:min-h-[480px] lg:min-h-[550px] flex flex-col justify-start">
 
                                 {/* Header */}
-                                <div className="absolute top-0 left-0 right-0 px-5 py-4 border-b border-slate-100 bg-slate-50/50 flex justify-between items-center z-20">
+                                <div className="absolute top-0 left-0 right-0 px-4 sm:px-5 py-3 sm:py-4 border-b border-slate-100 bg-slate-50/50 flex justify-between items-center z-20">
                                     <div className="flex items-center gap-2">
                                         <div className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500">
                                             <MessageSquare className="w-4 h-4" />

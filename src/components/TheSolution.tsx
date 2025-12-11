@@ -7,51 +7,51 @@ import {
 const TheSolution: React.FC = () => {
     return (
         <section className="w-full bg-white border-y border-slate-200 overflow-hidden">
-            <div className="grid lg:grid-cols-2 min-h-[600px]">
+            <div className="grid lg:grid-cols-2 min-h-[500px] lg:min-h-[600px]">
 
                 {/* Left Column: Text Content */}
-                <div className="relative p-12 lg:p-24 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-slate-200 order-2 lg:order-1 bg-white">
+                <div className="relative p-6 sm:p-8 md:p-12 lg:p-24 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-slate-200 order-1 lg:order-1 bg-white">
                     {/* Grid Background */}
                     {/* Soft Green Gradient Background */}
                     <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-emerald-100/50 via-transparent to-transparent"></div>
 
                     <div className="relative z-10 max-w-lg">
-                        <h4 className="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-6">
+                        <h4 className="text-xs sm:text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-4 sm:mb-6">
                             The Breakthrough
                         </h4>
-                        <h2 className="text-3xl lg:text-4xl font-serif text-slate-900 leading-[1.1] mb-6">
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-slate-900 leading-[1.1] mb-4 sm:mb-6">
                             What If Every Sales Call Automatically Became Actionable Revenue Intelligence?
                         </h2>
-                        <p className="text-lg text-slate-500 font-light leading-relaxed mb-8">
+                        <p className="text-sm sm:text-base lg:text-lg text-slate-500 font-light leading-relaxed mb-6 sm:mb-8">
                             Callix AI analyzes your sales conversations to surface the patterns that drive revenue:
                         </p>
 
-                        <ul className="space-y-4 mb-8">
+                        <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                             {[
                                 "Identify your highest-converting customer profiles and what makes them buy",
                                 "Generate ad creatives based on actual buyer language from winning calls",
                                 "Pin Point common objections that are killing deals",
                                 "Track which marketing campaigns deliver quality leads vs. tire-kickers"
                             ].map((item, i) => (
-                                <li key={i} className="flex items-start gap-3">
-                                    <ArrowRight className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
-                                    <span className="text-slate-700 leading-snug">{item}</span>
+                                <li key={i} className="flex items-start gap-2 sm:gap-3">
+                                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500 mt-0.5 shrink-0" />
+                                    <span className="text-slate-700 leading-snug text-sm sm:text-base">{item}</span>
                                 </li>
                             ))}
                         </ul>
 
-                        <p className="text-lg text-slate-500 font-light leading-relaxed mb-10">
+                        <p className="text-sm sm:text-base lg:text-lg text-slate-500 font-light leading-relaxed mb-8 sm:mb-10">
                             Think of it as your revenue intelligence layer—connecting what happens in sales calls to what you do in marketing.
                         </p>
 
-                        <button className="px-6 py-3 bg-[#1A1A1A] hover:bg-black text-white rounded-full font-medium transition-all shadow-xl shadow-emerald-900/5 hover:shadow-emerald-900/10 text-sm inline-flex items-center self-start">
-                            Book A Free “Prove It” Demo Today
+                        <button className="w-full sm:w-auto px-6 py-3 bg-[#1A1A1A] hover:bg-black text-white rounded-full font-medium transition-all shadow-xl shadow-emerald-900/5 hover:shadow-emerald-900/10 text-sm inline-flex items-center justify-center self-start">
+                            Book A Free "Prove It" Demo Today
                         </button>
                     </div>
                 </div>
 
                 {/* Right Column: Visual UI */}
-                <div className="relative bg-[#F8FAFC] p-8 lg:p-16 flex items-center justify-center order-1 lg:order-2">
+                <div className="relative bg-[#F8FAFC] p-6 sm:p-8 lg:p-16 flex items-center justify-center order-2 lg:order-2">
 
                     {/* Background Gradient - Neutral */}
                     <div className="absolute inset-0 bg-gradient-to-bl from-slate-100/50 to-slate-50/50"></div>

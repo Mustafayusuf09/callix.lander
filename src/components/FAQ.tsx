@@ -33,22 +33,22 @@ const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-slate-50 border-b border-slate-200">
-      <div className="max-w-3xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-serif text-slate-900 mb-4">Frequently Asked Questions</h2>
-          <p className="text-slate-500 font-light">Everything you need to know about the platform.</p>
+    <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 border-b border-slate-200">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-slate-900 mb-3 sm:mb-4">Frequently Asked Questions</h2>
+          <p className="text-sm sm:text-base text-slate-500 font-light">Everything you need to know about the platform.</p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="bg-white border border-slate-200 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-sm">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-6 text-left"
+                className="w-full flex items-center justify-between p-4 sm:p-6 text-left"
               >
-                <span className={`text-sm font-semibold transition-colors ${openIndex === index ? 'text-emerald-700' : 'text-slate-900'}`}>
-                    {faq.question}
+                <span className={`text-xs sm:text-sm font-semibold transition-colors pr-4 ${openIndex === index ? 'text-emerald-700' : 'text-slate-900'}`}>
+                  {faq.question}
                 </span>
                 {openIndex === index ? (
                   <Minus className="w-4 h-4 text-emerald-500 shrink-0" />
@@ -57,11 +57,10 @@ const FAQ: React.FC = () => {
                 )}
               </button>
               <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openIndex === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
-                }`}
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
               >
-                <div className="p-6 pt-0 text-sm text-slate-600 leading-relaxed font-light">
+                <div className="p-4 sm:p-6 pt-0 text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
                   {faq.answer}
                 </div>
               </div>
